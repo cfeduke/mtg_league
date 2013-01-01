@@ -26,3 +26,4 @@ Using PostgreSQL as the RDBMS because Postgres is great and if I need to deploy 
 
     host    all             mtg_league      127.0.0.1/32            trust
 
+You'll also need a local user `mtg_league`.

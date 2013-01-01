@@ -1,6 +1,6 @@
 == Magic: the Gathering League Tracking Tool
 
-My brick and mortar store, the [GameVault](http://www.thegamevault.net), often runs various leagues for Magic: the Gathering.
+My brick and mortar store, the [GameVault](http://www.thegamevault.net/), often runs various leagues for Magic: the Gathering.
 
 Their workflow is to presently as follows:
 
@@ -22,7 +22,7 @@ Known business rules in this implementation:
 
 === Setting Up
 
-Using PostgreSQL as the RDBMS because Postgres is great and if need to deploy to Heroku I can. The database.yml uses passwordless authentication which can be setup by editing `$POSTGRES_HOME/pg_hba.conf` (default filename) and adding a line like:
+Using PostgreSQL as the RDBMS because Postgres is great and if I need to deploy to Heroku I can. The database.yml uses passwordless authentication which can be setup by editing `$POSTGRES_HOME/pg_hba.conf` (default filename) and adding a line like:
 
-`host    all             mtg_league      127.0.0.1/32            trust`
+    host    all             mtg_league      127.0.0.1/32            trust
 

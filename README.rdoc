@@ -1,0 +1,28 @@
+== Magic: the Gathering League Tracking Tool
+
+My brick and mortar store, the [GameVault](http://www.thegamevault.net), often runs various leagues for Magic: the Gathering.
+
+Their workflow is to presently as follows:
+
+1. Print up a bunch of paper slips which a player can record a game on
+   a. Each game has a spot for player name, opponent name, and Win/Loss/Draw
+   b. There are blanks for up to three games
+2. A league member gets a slip and plays up to three games recording W/L/D
+3. Slips are returned to the front desk
+4. A volunteer correlates the paper slips each week and announces standings on our forums
+5. When the league concludes the top three players get the prize pot
+   a. Leagues often have a buy in of some number of booster packs
+
+The purpose of this web-based system is to give the volunteer a place to tabulate the scores for the league on a weekly basis. League members will also be able to see their standings.
+
+The only actor who needs a user account is the league volunteer. Other players do not need to have a login, and probably should not have a log in.
+
+Known business rules in this implementation:
+1. A player may only play another player for credit for up to 3 games per week
+
+=== Setting Up
+
+Using PostgreSQL as the RDBMS because Postgres is great and if need to deploy to Heroku I can. The database.yml uses passwordless authentication which can be setup by editing `$POSTGRES_HOME/pg_hba.conf` (default filename) and adding a line like:
+
+`host    all             mtg_league      127.0.0.1/32            trust`
+

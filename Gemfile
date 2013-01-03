@@ -15,6 +15,7 @@ gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+gem 'haml-rails'
 
 # model validation
 gem 'validates_timeliness'
